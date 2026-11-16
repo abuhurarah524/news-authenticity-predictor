@@ -2,6 +2,10 @@
 
 **Live app: [margin-news-authenticity.netlify.app](https://margin-news-authenticity.netlify.app)**
 
+**Full project report: [Read online](https://margin-news-authenticity.netlify.app/report.html)**
+
+The complete original Word report is available inside the app, with section navigation, adjustable text size, print support, tables, diagrams, and an original DOCX download. It preserves the historical report; its claims and results should be distinguished from the current model evaluation below.
+
 Margin is a news classification project with a responsive web interface, a trained machine learning pipeline, and a serverless deployment on Netlify. Submit a public article URL or paste an article to read its content and see a predicted truthfulness category.
 
 > This is an experimental research project. Predictions reflect patterns in the training data; they do not independently verify claims or establish whether an article is true.
@@ -142,6 +146,7 @@ netlify/
   generated/model.json         Exported deployment model
 scripts/                       Export, test-fixture, and deployment helpers
 tests/netlify.test.mjs          JavaScript inference and API tests
+scripts/convert_report.py      Convert the original Word report to readable HTML
 netlify.toml                   Hosting configuration
 requirements.txt               Python dependencies
 package.json                   JavaScript dependencies and commands

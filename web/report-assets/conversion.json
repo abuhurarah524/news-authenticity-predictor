@@ -1,0 +1,26 @@
+{
+  "source": "CS12-_An_intelligent_System_for_Fake_News_Content_Detection.docx",
+  "source_sha256": "985fc1dac10d4f2cf13d67f9e98b502eee183667b261936811f49ac6acb56813",
+  "words": 4730,
+  "tables": 14,
+  "images": 16,
+  "headings": 57,
+  "conversion_messages": [
+    {
+      "type": "warning",
+      "message": "Image of type image/x-emf is unlikely to display in web browsers"
+    },
+    {
+      "type": "warning",
+      "message": "An unrecognised element was ignored: v:stroke"
+    },
+    {
+      "type": "warning",
+      "message": "An unrecognised element was ignored: v:path"
+    },
+    {
+      "type": "warning",
+      "message": "An unrecognised element was ignored: office-word:anchorlock"
+    }
+  ]
+}
