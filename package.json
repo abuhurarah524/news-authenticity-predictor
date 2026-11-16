@@ -1,0 +1,19 @@
+{
+  "name": "margin-news-authenticity",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test tests/netlify.test.mjs",
+    "deploy": "netlify deploy --prod --no-build",
+    "preview": "netlify dev"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "entities": "^6.0.0",
+    "ipaddr.js": "^2.2.0",
+    "linkedom": "^0.18.12"
+  },
+  "devDependencies": { "netlify-cli": "^23.0.0" }
+}

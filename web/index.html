@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A little context before you share. Read and review news with Margin.">
+  <title>Margin — Read between the headlines.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%232b493d'/%3E%3Ctext x='8' y='35' font-family='Georgia' font-size='40' fill='%23faf8f1'%3Em%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead wrap">
+    <a class="brand" href="/" aria-label="Margin home"><span class="brand-mark">m<span>·</span></span>margin<span class="brand-period">.</span></a>
+    <span class="masthead-note">A LITTLE CONTEXT BEFORE YOU SHARE</span>
+    <button class="text-button about-trigger">How it works <span aria-hidden="true">↗</span></button>
+  </header>
+  <main class="wrap">
+    <section class="intro">
+      <div class="intro-copy"><div class="eyebrow"><span class="small-line"></span> THE NEWS, WITH A SECOND LOOK</div>
+        <h1>Read between<br>the <em>headlines.</em></h1>
+        <p>Not everything in your feed tells the whole story.<br class="desktop-break"> Take a moment. Give the news a closer read.</p>
+      </div>
+      <div class="editorial-art" aria-hidden="true">
+        <div class="art-caption">A DIFFERENT PERSPECTIVE</div>
+        <div class="paper paper-back"><i></i><i></i><i></i></div>
+        <div class="paper paper-front"><span class="paper-edition">THE DAILY PERSPECTIVE <b>№ 014</b></span><div class="paper-rule"></div><div class="paper-headline">There’s more<br>to the story.</div><div class="paper-columns"><div><i></i><i></i><i></i><i></i><i></i><i></i></div><div><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="highlight-stroke"></div></div>
+        <div class="lens"><div class="lens-inner"><span>look<br><em>closer.</em></span></div></div><span class="art-spark">✳</span>
+      </div>
+    </section>
+    <section class="workspace" aria-label="Article review workspace">
+      <div class="input-panel">
+        <div class="section-top"><span class="step">01 / YOUR ARTICLE</span><span class="private-note"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3.5" y="7" width="9" height="7" rx="1.5"/><path d="M5.5 7V4a2.5 2.5 0 0 1 5 0v3"/></svg> No account needed</span></div>
+        <h2>What are you reading?</h2><p class="panel-description">Bring a link or the story itself. We’ll take it from here.</p>
+        <div class="tabs" role="tablist" aria-label="Article input type"><button id="url-tab" class="tab active" role="tab" aria-selected="true" aria-controls="url-panel"><span aria-hidden="true">↗</span> Article link</button><button id="text-tab" class="tab" role="tab" aria-selected="false" aria-controls="text-panel" tabindex="-1"><span aria-hidden="true">≡</span> Paste text</button></div>
+        <form id="article-form">
+          <div id="url-panel" role="tabpanel" aria-labelledby="url-tab"><label for="article-url">ARTICLE URL</label><input id="article-url" type="url" placeholder="https://example.com/the-story" autocomplete="url"><p class="field-note">A direct link works best. Some paywalled sites may be unavailable.</p></div>
+          <div id="text-panel" role="tabpanel" aria-labelledby="text-tab" hidden><label for="article-title">HEADLINE <span class="optional">OPTIONAL</span></label><input id="article-title" placeholder="Give the story a title" maxlength="300"><label for="article-text" class="text-label">ARTICLE TEXT</label><textarea id="article-text" rows="6" placeholder="Paste the full article here. A little more context goes a long way…" maxlength="100000"></textarea><p class="field-note"><span id="word-count">0 words</span> · At least 30 words</p></div>
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+          <button class="analyze-button" id="analyze-button" type="submit"><span>Take a closer look</span><span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="sample-row"><span>Just looking around?</span> <button id="sample-button">Try a sample article <span aria-hidden="true">→</span></button></div>
+      </div>
+      <aside class="result-panel" id="result-panel" aria-live="polite" aria-busy="false">
+        <div class="section-top"><span class="step">02 / THE CLOSER LOOK</span><span class="status-tag" id="result-tag">WAITING FOR A STORY</span></div>
+        <div id="result-content" class="empty-state"><div class="empty-icon" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><path d="M20 17h29l12 12v34H20z"/><path d="M49 17v13h12M29 37h21M29 44h17M29 51h12"/><circle cx="53" cy="53" r="12"/><path d="m62 62 9 9"/></svg></div><h3>Every story deserves<br>a second look.</h3><p>Add an article to start your review.<br>Your reading workspace will appear here.</p><div class="empty-footnote"><span>↖</span> A little curiosity is a good place to start.</div></div>
+      </aside>
+    </section>
+    <section class="principles" aria-label="Our approach"><div class="principle-intro"><span class="eyebrow">A NOTE IN THE MARGIN</span><h2>Stay curious.<br>Think critically.</h2></div><div class="principle"><span class="principle-number">01</span><h3>Context comes first.</h3><p>A headline is a starting point. Read the full story, check the date, and look for the original source.</p></div><div class="principle"><span class="principle-number">02</span><h3>A signal, not a verdict.</h3><p>Model predictions can be wrong. Use them as a prompt to investigate, alongside your own judgment.</p></div><div class="principle"><span class="principle-number">03</span><h3>Pause before you share.</h3><p>If a story makes you feel something strongly, that’s a good moment to take another look.</p></div></section>
+  </main>
+  <footer class="wrap"><a class="footer-brand" href="/">margin.</a><span>For a more considered feed.</span><button class="text-button about-trigger">About this project <span aria-hidden="true">↗</span></button></footer>
+  <dialog id="about-dialog"><button id="close-dialog" class="close-dialog" aria-label="Close about dialog">×</button><span class="eyebrow">BEHIND THE MARGIN</span><h2>A second look.<br>Not the last word.</h2><p>Margin is the reading interface for the News Authenticity Predictor research project. Add a public article link or paste text to prepare a review.</p><p>Predictions describe patterns learned from a dataset; they do not verify facts or replace checking original evidence. The experimental model has source and style biases, especially outside political news.</p><p>Your article is sent to the app’s server to be processed. Margin does not save article history.</p><button class="analyze-button" id="dialog-done">Back to reading <span aria-hidden="true">↗</span></button></dialog>
+</body>
+</html>

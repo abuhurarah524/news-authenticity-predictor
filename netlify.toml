@@ -1,0 +1,34 @@
+[build]
+  publish = "web"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["netlify/generated/model.json"]
+
+[[redirects]]
+  from = "/api/status"
+  to = "/.netlify/functions/status"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/analyze"
+  to = "/.netlify/functions/analyze"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "no-store"

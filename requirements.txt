@@ -1,0 +1,13 @@
+numpy
+pandas
+scipy
+scikit-learn
+joblib
+imbalanced-learn
+nltk
+matplotlib
+seaborn
+newspaper3k
+lxml_html_clean
+notebook
+ipykernel

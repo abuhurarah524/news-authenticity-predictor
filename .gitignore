@@ -102,6 +102,11 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+.tools/
+node_modules/
+.netlify/
+deployment/*.zip
+artifacts/*.joblib
 .env
 .venv
 env/

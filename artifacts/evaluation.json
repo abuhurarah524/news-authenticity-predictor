@@ -1,0 +1,136 @@
+{
+  "trained_at": "2026-11-16T09:32:20.603578+00:00",
+  "sklearn_version": "1.9.1",
+  "model": "TF-IDF (unigrams + bigrams) + balanced LinearSVC",
+  "experimental": true,
+  "limitations": [
+    "Random stratified holdout uses the same source collection as training; it does not establish publisher or temporal generalization.",
+    "Data mixes original news with fact-check reports and contains source/style shortcuts.",
+    "Explicit rating sentences and ruling sections are filtered, but other verdict cues may remain.",
+    "Predictions are dataset labels, not factual verification. Unrelated domains such as astronomy may be outside training coverage."
+  ],
+  "input_rows": 26068,
+  "retained_rows": 25932,
+  "conflicting_body_groups_removed": 1,
+  "train_rows": 20745,
+  "test_rows": 5187,
+  "random_state": 42,
+  "classes": [
+    "FALSE",
+    "HALF-TRUE",
+    "MOSTLY-FALSE",
+    "MOSTLY-TRUE",
+    "PANTS-FIRE",
+    "TRUE"
+  ],
+  "class_counts": {
+    "TRUE": 9437,
+    "FALSE": 8999,
+    "HALF-TRUE": 2054,
+    "MOSTLY-TRUE": 1981,
+    "PANTS-FIRE": 1792,
+    "MOSTLY-FALSE": 1669
+  },
+  "accuracy": 0.8852901484480432,
+  "classification_report": {
+    "FALSE": {
+      "precision": 0.9955678670360111,
+      "recall": 0.9983333333333333,
+      "f1-score": 0.9969486823855755,
+      "support": 1800.0
+    },
+    "HALF-TRUE": {
+      "precision": 0.5112781954887218,
+      "recall": 0.49635036496350365,
+      "f1-score": 0.5037037037037037,
+      "support": 411.0
+    },
+    "MOSTLY-FALSE": {
+      "precision": 0.563573883161512,
+      "recall": 0.49101796407185627,
+      "f1-score": 0.5248,
+      "support": 334.0
+    },
+    "MOSTLY-TRUE": {
+      "precision": 0.5640449438202247,
+      "recall": 0.6338383838383839,
+      "f1-score": 0.5969084423305588,
+      "support": 396.0
+    },
+    "PANTS-FIRE": {
+      "precision": 0.8504398826979472,
+      "recall": 0.8100558659217877,
+      "f1-score": 0.8297567954220315,
+      "support": 358.0
+    },
+    "TRUE": {
+      "precision": 0.9895068205666316,
+      "recall": 0.9989406779661016,
+      "f1-score": 0.9942013705851345,
+      "support": 1888.0
+    },
+    "accuracy": 0.8852901484480432,
+    "macro avg": {
+      "precision": 0.7457352654618415,
+      "recall": 0.7380894316824943,
+      "f1-score": 0.7410531657378341,
+      "support": 5187.0
+    },
+    "weighted avg": {
+      "precision": 0.8842103969491236,
+      "recall": 0.8852901484480432,
+      "f1-score": 0.8843828637179451,
+      "support": 5187.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1797,
+      0,
+      0,
+      1,
+      0,
+      2
+    ],
+    [
+      2,
+      204,
+      67,
+      123,
+      12,
+      3
+    ],
+    [
+      2,
+      81,
+      164,
+      52,
+      29,
+      6
+    ],
+    [
+      2,
+      94,
+      35,
+      251,
+      10,
+      4
+    ],
+    [
+      1,
+      20,
+      24,
+      18,
+      290,
+      5
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1886
+    ]
+  ]
+}
